@@ -16,6 +16,9 @@
 		C592E04F217B8A9400658104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E04E217B8A9400658104 /* HomeViewController.swift */; };
 		C592E051217B8AC800658104 /* RocketLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E050217B8AC800658104 /* RocketLaunch.swift */; };
 		C592E054217B912000658104 /* RocketLaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E053217B912000658104 /* RocketLaunchTableViewCell.swift */; };
+		C592E056217B97A500658104 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E055217B97A500658104 /* Date.swift */; };
+		C592E058217B9AE300658104 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E057217B9AE300658104 /* CALayer.swift */; };
+		C592E05A217B9C3000658104 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E059217B9C3000658104 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		C592E04E217B8A9400658104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C592E050217B8AC800658104 /* RocketLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunch.swift; sourceTree = "<group>"; };
 		C592E053217B912000658104 /* RocketLaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchTableViewCell.swift; sourceTree = "<group>"; };
+		C592E055217B97A500658104 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		C592E057217B9AE300658104 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		C592E059217B9C3000658104 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				C592E049217B7FFE00658104 /* UIColor.swift */,
+				C592E055217B97A500658104 /* Date.swift */,
+				C592E057217B9AE300658104 /* CALayer.swift */,
+				C592E059217B9C3000658104 /* UIImage.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -188,9 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C592E04C217B885900658104 /* Rocket.swift in Sources */,
+				C592E058217B9AE300658104 /* CALayer.swift in Sources */,
 				C592E035217B2F9100658104 /* AppDelegate.swift in Sources */,
+				C592E056217B97A500658104 /* Date.swift in Sources */,
 				C592E051217B8AC800658104 /* RocketLaunch.swift in Sources */,
 				C592E04A217B7FFE00658104 /* UIColor.swift in Sources */,
+				C592E05A217B9C3000658104 /* UIImage.swift in Sources */,
 				C592E054217B912000658104 /* RocketLaunchTableViewCell.swift in Sources */,
 				C592E04F217B8A9400658104 /* HomeViewController.swift in Sources */,
 			);

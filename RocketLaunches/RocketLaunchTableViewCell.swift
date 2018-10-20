@@ -27,11 +27,13 @@ class RocketLaunchTableViewCell: UITableViewCell {
     @IBOutlet weak var destinationView: UIView!
     @IBOutlet weak var destinationLabel: UILabel!
     
-    static let identifier = String(describing: self)
+    static let identifier = "NotSoUniqueID"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        destinationView.backgroundColor = UIColor.kfDestination
+        rocketOperatorView.backgroundColor = UIColor.kfRocketOperator
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,7 +43,25 @@ class RocketLaunchTableViewCell: UITableViewCell {
     }
     
     public func reloadData(for data: RocketLauch) {
+        contentView.backgroundColor = UIColor.kfGray
         
+        containerView.backgroundColor = UIColor.kfSuperWhite
+        containerView.layer.setUpShadow()
+        containerView.layer.cornerRadius = CALayer.kfCornerRadius
+        containerView.clipsToBounds = true
+        
+        
+        missionNameLabel.text = data.missionName
+        spaceShipNameLabel.text = data.rocket.name
+        launchDateLabel.text = data.date.asString(style: .short)
+        
+        payloadImageView.image = data.payload.getImage()
+        
+        rocketOperatorLabel.text = data.rocketOperator
+        destinationLabel.text = data.destination
+        
+        wasSuccesfulLabel.text = data.status.rawValue.capitalized
+        wasSuccesfulView.backgroundColor = data.status.getColor()
     }
 
 }

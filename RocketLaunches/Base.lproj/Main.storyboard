@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RocketLaunches" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RocketLaunches" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KLJ-yd-MTi" customClass="RocketLaunchTableViewCell" customModule="RocketLaunches" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotSoUniqueID" rowHeight="140" id="KLJ-yd-MTi" customClass="RocketLaunchTableViewCell" customModule="RocketLaunches" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KLJ-yd-MTi" id="eNE-uM-Yeb">
@@ -83,7 +83,6 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="trailing" secondItem="Ll5-vt-XCs" secondAttribute="trailing" constant="4" id="Wnm-Fd-rZG"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="Ll5-vt-XCs" secondAttribute="bottom" constant="4" id="giw-Yx-ekz"/>
@@ -101,7 +100,6 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="trailing" secondItem="7OL-3e-ylf" secondAttribute="trailing" constant="4" id="QL2-K3-mHX"/>
                                                                                 <constraint firstItem="7OL-3e-ylf" firstAttribute="leading" secondItem="T8D-he-Gbm" secondAttribute="leading" constant="4" id="Rsf-Uh-evo"/>
@@ -119,7 +117,6 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" red="0.97254901959999995" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstItem="78C-5n-Dup" firstAttribute="top" secondItem="pCd-I0-iBq" secondAttribute="top" constant="4" id="O9c-zL-fbL"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="78C-5n-Dup" secondAttribute="bottom" constant="4" id="gb2-jb-tnw"/>

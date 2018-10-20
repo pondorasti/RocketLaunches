@@ -11,19 +11,19 @@ import UIKit
 
 struct RocketLauch {
     
-    enum TypeOfPayload {
+    enum PayloadType {
         case astronaut, cargo, sattelite
         
         func getImage() -> UIImage {
             switch self {
             case .astronaut:
-                return UIImage()
+                return UIImage.astronautIcon
                 
             case .cargo:
-                return UIImage()
+                return UIImage.cargoIcon
                 
             case .sattelite:
-                return UIImage()
+                return UIImage.satteliteIcon
             }
         }
     }
@@ -34,16 +34,16 @@ struct RocketLauch {
         func getColor() -> UIColor {
             switch self {
             case .TBD:
-                return UIColor()
+                return UIColor.kfDestructive
                 
             case .go:
-                return UIColor()
+                return UIColor.kfDestructive
                 
             case .succes:
-                return UIColor()
+                return UIColor.kfDestructive
                 
             case .failure:
-                return UIColor()
+                return UIColor.kfDestructive
             }
         }
     }
@@ -53,10 +53,10 @@ struct RocketLauch {
     let missionName: String
     let missionDescription: String
     
-    let payloadImage: UIImage
+    let payload: PayloadType
     
     let date: Date
-    let wasSuccesful: Bool?
+    let status: Status
     let rocketOperator: String
     
     let spacePort: String
