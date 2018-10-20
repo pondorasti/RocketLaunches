@@ -30,7 +30,6 @@ class DetailedRocketLaunchViewController: UIViewController {
         rocketLaunchTableView.backgroundColor = .kfGray
         
         rocketLaunchTableView.dataSource = self
-        rocketLaunchTableView.delegate = self
     }
 
 }

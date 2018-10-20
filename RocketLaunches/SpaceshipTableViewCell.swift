@@ -31,7 +31,7 @@ class SpaceshipTableViewCell: UITableViewCell {
     @IBOutlet weak var wikiButton: UIButton!
     
     @IBAction func wikiButtonPressed(_ sender: Any) {        
-        delegate?.shouldPressButton(self)
+        delegate?.shouldPressButton()
     }
     
     static let identifier = "spaceship"
