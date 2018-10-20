@@ -19,6 +19,9 @@
 		C592E058217B9AE300658104 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E057217B9AE300658104 /* CALayer.swift */; };
 		C592E05A217B9C3000658104 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E059217B9C3000658104 /* UIImage.swift */; };
 		C592E05C217BAF2C00658104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C592E05B217BAF2C00658104 /* Assets.xcassets */; };
+		C592E05E217BC2D800658104 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E05D217BC2D800658104 /* MissionTableViewCell.swift */; };
+		C592E061217BC43B00658104 /* DetailedRocketLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E060217BC43B00658104 /* DetailedRocketLaunchViewController.swift */; };
+		C592E063217BCAAB00658104 /* UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E062217BCAAB00658104 /* UIStoryboardSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		C592E057217B9AE300658104 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		C592E059217B9C3000658104 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C592E05B217BAF2C00658104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C592E05D217BC2D800658104 /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
+		C592E060217BC43B00658104 /* DetailedRocketLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRocketLaunchViewController.swift; sourceTree = "<group>"; };
+		C592E062217BCAAB00658104 /* UIStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				C592E038217B2F9100658104 /* Main.storyboard */,
 				C592E05B217BAF2C00658104 /* Assets.xcassets */,
 				C592E052217B8D3900658104 /* Home */,
+				C592E05F217BC2DD00658104 /* Detailed Rocket Launch */,
 			);
 			path = RocketLaunches;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 				C592E055217B97A500658104 /* Date.swift */,
 				C592E057217B9AE300658104 /* CALayer.swift */,
 				C592E059217B9C3000658104 /* UIImage.swift */,
+				C592E062217BCAAB00658104 /* UIStoryboardSegue.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +131,15 @@
 				C592E053217B912000658104 /* RocketLaunchTableViewCell.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		C592E05F217BC2DD00658104 /* Detailed Rocket Launch */ = {
+			isa = PBXGroup;
+			children = (
+				C592E060217BC43B00658104 /* DetailedRocketLaunchViewController.swift */,
+				C592E05D217BC2D800658104 /* MissionTableViewCell.swift */,
+			);
+			name = "Detailed Rocket Launch";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C592E05E217BC2D800658104 /* MissionTableViewCell.swift in Sources */,
 				C592E04C217B885900658104 /* Rocket.swift in Sources */,
 				C592E058217B9AE300658104 /* CALayer.swift in Sources */,
 				C592E035217B2F9100658104 /* AppDelegate.swift in Sources */,
 				C592E056217B97A500658104 /* Date.swift in Sources */,
+				C592E061217BC43B00658104 /* DetailedRocketLaunchViewController.swift in Sources */,
 				C592E051217B8AC800658104 /* RocketLaunch.swift in Sources */,
+				C592E063217BCAAB00658104 /* UIStoryboardSegue.swift in Sources */,
 				C592E04A217B7FFE00658104 /* UIColor.swift in Sources */,
 				C592E05A217B9C3000658104 /* UIImage.swift in Sources */,
 				C592E054217B912000658104 /* RocketLaunchTableViewCell.swift in Sources */,

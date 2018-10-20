@@ -10,9 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var rocketLaunchesTableView: UITableView!
+    @IBOutlet private weak var rocketLaunchesTableView: UITableView!
     
-    var rocketLaunches = [RocketLauch]()
+    var rocketLaunches = [RocketLaunch]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         
         let rocket = Rocket(image: UIImage(), wikiLink: URL(string: "https://launchlibrary.net/docs/1.4/api.html#eventtype")!, name: "Falcon", family: "Family", configuration: "Config", generalDescription: "Big Spaceship", height: 420, diameter: 420, numberOfStages: 4, massToLEO: 9, massToGTO: 9, massAtLaunch: 9)
         
-        let rocketLaunch = RocketLauch(rocket: rocket, missionName: "Mission Name", missionDescription: "Mission Description", payload: .astronaut, date: Date(), status: .go, rocketOperator: "SpaceX", spacePort: "i duuno no", destination: "Mars", dateWindow: "12-12")
+        let rocketLaunch = RocketLaunch(rocket: rocket, missionName: "Mission Name", missionDescription: "Mission Description", payload: .astronaut, date: Date(), status: .go, rocketOperator: "SpaceX", spacePort: "i duuno no", destination: "Mars", dateWindow: "12-12")
         
         rocketLaunches = [rocketLaunch, rocketLaunch, rocketLaunch, rocketLaunch]
         
@@ -39,9 +39,23 @@ class HomeViewController: UIViewController {
         rocketLaunchesTableView.delegate = self
         
         rocketLaunchesTableView.separatorStyle = .none
-        rocketLaunchesTableView.allowsSelection = false
-        
         rocketLaunchesTableView.backgroundColor = UIColor.kfGray
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let id = segue.identifier
+        
+        switch id {
+        case UIStoryboardSegue.showDetailedView:
+            guard let detailedVC = segue.destination as? DetailedRocketLaunchViewController, let index = sender as? Int else {
+                fatalError()
+            }
+            
+            detailedVC.rocketLaunch = rocketLaunches[index]
+            
+        default:
+            fatalError()
+        }
     }
 
 }
@@ -62,13 +76,12 @@ extension HomeViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        performSegue(withIdentifier: UIStoryboardSegue.showDetailedView, sender: indexPath.row)
+        return false
     }
 }

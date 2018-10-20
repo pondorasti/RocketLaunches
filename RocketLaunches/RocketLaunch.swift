@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct RocketLauch {
+struct RocketLaunch {
     
     enum PayloadType {
         case astronaut, cargo, sattelite

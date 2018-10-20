@@ -10,22 +10,22 @@ import UIKit
 
 class RocketLaunchTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var containerView: UIView!
     
-    @IBOutlet weak var payloadImageView: UIImageView!
+    @IBOutlet private weak var payloadImageView: UIImageView!
     
-    @IBOutlet weak var missionNameLabel: UILabel!
-    @IBOutlet weak var spaceShipNameLabel: UILabel!
-    @IBOutlet weak var launchDateLabel: UILabel!
+    @IBOutlet private weak var missionNameLabel: UILabel!
+    @IBOutlet private weak var spaceShipNameLabel: UILabel!
+    @IBOutlet private weak var launchDateLabel: UILabel!
     
-    @IBOutlet weak var wasSuccesfulView: UIView!
-    @IBOutlet weak var wasSuccesfulLabel: UILabel!
+    @IBOutlet private weak var wasSuccesfulView: UIView!
+    @IBOutlet private weak var wasSuccesfulLabel: UILabel!
     
-    @IBOutlet weak var rocketOperatorView: UIView!
-    @IBOutlet weak var rocketOperatorLabel: UILabel!
+    @IBOutlet private weak var rocketOperatorView: UIView!
+    @IBOutlet private weak var rocketOperatorLabel: UILabel!
     
-    @IBOutlet weak var destinationView: UIView!
-    @IBOutlet weak var destinationLabel: UILabel!
+    @IBOutlet private weak var destinationView: UIView!
+    @IBOutlet private weak var destinationLabel: UILabel!
     
     static let identifier = "NotSoUniqueID"
     
@@ -37,11 +37,20 @@ class RocketLaunchTableViewCell: UITableViewCell {
         
         contentView.backgroundColor = UIColor.kfGray
         
+        configureContainerView()
+        configureLabels()
+        
+        
+    }
+    
+    private func configureContainerView() {
         containerView.backgroundColor = UIColor.kfSuperWhite
         containerView.layer.setUpShadow()
         containerView.layer.cornerRadius = CALayer.kfCornerRadius
         containerView.clipsToBounds = false
-        
+    }
+    
+    private func configureLabels() {
         missionNameLabel.textColor = UIColor.kfHeadline
         spaceShipNameLabel.textColor = UIColor.kfBody
         launchDateLabel.textColor = UIColor.kfBody
@@ -55,16 +64,7 @@ class RocketLaunchTableViewCell: UITableViewCell {
         destinationView.layer.cornerRadius = CALayer.kfCornerRadius
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-        
-        
-        
-    }
-    
-    public func reloadData(for data: RocketLauch) {
+    public func reloadData(for data: RocketLaunch) {
         missionNameLabel.text = data.missionName
         spaceShipNameLabel.text = data.rocket.name
         launchDateLabel.text = "Date: \(data.date.asString(style: .short))"
@@ -77,5 +77,4 @@ class RocketLaunchTableViewCell: UITableViewCell {
         wasSuccesfulLabel.text = data.status.rawValue.capitalized
         wasSuccesfulView.backgroundColor = data.status.getColor()
     }
-
 }
