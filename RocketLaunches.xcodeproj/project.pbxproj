@@ -22,6 +22,7 @@
 		C592E05E217BC2D800658104 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E05D217BC2D800658104 /* MissionTableViewCell.swift */; };
 		C592E061217BC43B00658104 /* DetailedRocketLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E060217BC43B00658104 /* DetailedRocketLaunchViewController.swift */; };
 		C592E063217BCAAB00658104 /* UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E062217BCAAB00658104 /* UIStoryboardSegue.swift */; };
+		C592E065217BDF1100658104 /* SpaceshipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E064217BDF1100658104 /* SpaceshipTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		C592E05D217BC2D800658104 /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
 		C592E060217BC43B00658104 /* DetailedRocketLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRocketLaunchViewController.swift; sourceTree = "<group>"; };
 		C592E062217BCAAB00658104 /* UIStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegue.swift; sourceTree = "<group>"; };
+		C592E064217BDF1100658104 /* SpaceshipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				C592E060217BC43B00658104 /* DetailedRocketLaunchViewController.swift */,
 				C592E05D217BC2D800658104 /* MissionTableViewCell.swift */,
+				C592E064217BDF1100658104 /* SpaceshipTableViewCell.swift */,
 			);
 			name = "Detailed Rocket Launch";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C592E05E217BC2D800658104 /* MissionTableViewCell.swift in Sources */,
+				C592E065217BDF1100658104 /* SpaceshipTableViewCell.swift in Sources */,
 				C592E04C217B885900658104 /* Rocket.swift in Sources */,
 				C592E058217B9AE300658104 /* CALayer.swift in Sources */,
 				C592E035217B2F9100658104 /* AppDelegate.swift in Sources */,

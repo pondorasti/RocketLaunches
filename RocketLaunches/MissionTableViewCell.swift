@@ -20,17 +20,20 @@ class MissionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.backgroundColor = UIColor.kfGray
+        contentView.backgroundColor = .kfGray
         
-        containerView.backgroundColor = UIColor.kfSuperWhite
+        missionTitleLabel.textColor = .kfHeadline
+        descriptionLabel.textColor = .kfBody
+        
+        configureContainerView()
+    }
+    
+    private func configureContainerView() {
+        containerView.backgroundColor = .kfSuperWhite
         containerView.layer.setUpShadow()
         containerView.layer.cornerRadius = CALayer.kfCornerRadius
         containerView.clipsToBounds = false
-        
-        missionTitleLabel.textColor = UIColor.kfHeadline
-        descriptionLabel.textColor = UIColor.kfBody
     }
-    
     
     public func reloadData(for data: RocketLaunch) {
         missionTitleLabel.text = data.missionName

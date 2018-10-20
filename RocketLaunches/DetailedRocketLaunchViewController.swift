@@ -25,6 +25,9 @@ class DetailedRocketLaunchViewController: UIViewController {
         rocketLaunchTableView.allowsSelection = false
         
         rocketLaunchTableView.rowHeight = UITableView.automaticDimension
+        rocketLaunchTableView.separatorStyle = .none
+        
+        rocketLaunchTableView.backgroundColor = .kfGray
         
         rocketLaunchTableView.dataSource = self
         rocketLaunchTableView.delegate = self
@@ -35,7 +38,7 @@ class DetailedRocketLaunchViewController: UIViewController {
 extension DetailedRocketLaunchViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +63,18 @@ extension DetailedRocketLaunchViewController: UITableViewDataSource {
             }
             
             cell.reloadData(for: rocketLaunch)
+            
+            return cell
+            
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SpaceshipTableViewCell.identifier, for: indexPath) as? SpaceshipTableViewCell else {
+                assertionFailure("somebody is dumb")
+                return UITableViewCell()
+            }
+            
+            cell.reloadData(for: rocketLaunch.rocket)
+            cell.delegate = self
+            
             return cell
             
         default:
@@ -72,6 +87,8 @@ extension DetailedRocketLaunchViewController: UITableViewDataSource {
     
 }
 
-extension DetailedRocketLaunchViewController: UITableViewDelegate {
-    
+extension DetailedRocketLaunchViewController: WikiDelegate {
+    func shouldPressButton() {
+        UIApplication.shared.open(rocketLaunch.rocket.wikiLink, options: [:])
+    }
 }

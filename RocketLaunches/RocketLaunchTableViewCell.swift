@@ -32,15 +32,13 @@ class RocketLaunchTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        destinationView.backgroundColor = UIColor.kfDestination
-        rocketOperatorView.backgroundColor = UIColor.kfRocketOperator
+        destinationView.backgroundColor = .kfPrimary
+        rocketOperatorView.backgroundColor = .kfRocketOperator
         
-        contentView.backgroundColor = UIColor.kfGray
+        contentView.backgroundColor = .kfGray
         
         configureContainerView()
         configureLabels()
-        
-        
     }
     
     private func configureContainerView() {
@@ -51,13 +49,13 @@ class RocketLaunchTableViewCell: UITableViewCell {
     }
     
     private func configureLabels() {
-        missionNameLabel.textColor = UIColor.kfHeadline
-        spaceShipNameLabel.textColor = UIColor.kfBody
-        launchDateLabel.textColor = UIColor.kfBody
+        missionNameLabel.textColor = .kfHeadline
+        spaceShipNameLabel.textColor = .kfBody
+        launchDateLabel.textColor = .kfBody
         
-        wasSuccesfulLabel.textColor = UIColor.kfSuperWhite
-        rocketOperatorLabel.textColor = UIColor.kfSuperWhite
-        destinationLabel.textColor = UIColor.kfSuperWhite
+        wasSuccesfulLabel.textColor = .kfSuperWhite
+        rocketOperatorLabel.textColor = .kfSuperWhite
+        destinationLabel.textColor = .kfSuperWhite
         
         wasSuccesfulView.layer.cornerRadius = CALayer.kfCornerRadius
         rocketOperatorView.layer.cornerRadius = CALayer.kfCornerRadius
