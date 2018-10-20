@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C592E035217B2F9100658104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E034217B2F9100658104 /* AppDelegate.swift */; };
-		C592E037217B2F9100658104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E036217B2F9100658104 /* ViewController.swift */; };
 		C592E03A217B2F9100658104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E038217B2F9100658104 /* Main.storyboard */; };
 		C592E03C217B2F9200658104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C592E03B217B2F9200658104 /* Assets.xcassets */; };
 		C592E03F217B2F9200658104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E03D217B2F9200658104 /* LaunchScreen.storyboard */; };
+		C592E04A217B7FFE00658104 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E049217B7FFE00658104 /* UIColor.swift */; };
+		C592E04C217B885900658104 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E04B217B885900658104 /* Rocket.swift */; };
+		C592E04F217B8A9400658104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E04E217B8A9400658104 /* HomeViewController.swift */; };
+		C592E051217B8AC800658104 /* RocketLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E050217B8AC800658104 /* RocketLaunch.swift */; };
+		C592E054217B912000658104 /* RocketLaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E053217B912000658104 /* RocketLaunchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C592E031217B2F9100658104 /* RocketLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C592E034217B2F9100658104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C592E036217B2F9100658104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C592E039217B2F9100658104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C592E03B217B2F9200658104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C592E03E217B2F9200658104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C592E040217B2F9200658104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C592E049217B7FFE00658104 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C592E04B217B885900658104 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		C592E04E217B8A9400658104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C592E050217B8AC800658104 /* RocketLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunch.swift; sourceTree = "<group>"; };
+		C592E053217B912000658104 /* RocketLaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		C592E033217B2F9100658104 /* RocketLaunches */ = {
 			isa = PBXGroup;
 			children = (
-				C592E034217B2F9100658104 /* AppDelegate.swift */,
-				C592E036217B2F9100658104 /* ViewController.swift */,
+				C592E047217B7FD300658104 /* Supporting Files */,
+				C592E046217B7FCB00658104 /* Helper */,
+				C592E048217B7FEE00658104 /* Extensions */,
+				C592E04D217B8A8300658104 /* Models */,
 				C592E038217B2F9100658104 /* Main.storyboard */,
+				C592E052217B8D3900658104 /* Home */,
 				C592E03B217B2F9200658104 /* Assets.xcassets */,
-				C592E03D217B2F9200658104 /* LaunchScreen.storyboard */,
-				C592E040217B2F9200658104 /* Info.plist */,
 			);
 			path = RocketLaunches;
+			sourceTree = "<group>";
+		};
+		C592E046217B7FCB00658104 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		C592E047217B7FD300658104 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C592E034217B2F9100658104 /* AppDelegate.swift */,
+				C592E040217B2F9200658104 /* Info.plist */,
+				C592E03D217B2F9200658104 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C592E048217B7FEE00658104 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C592E049217B7FFE00658104 /* UIColor.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C592E04D217B8A8300658104 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C592E04B217B885900658104 /* Rocket.swift */,
+				C592E050217B8AC800658104 /* RocketLaunch.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C592E052217B8D3900658104 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C592E04E217B8A9400658104 /* HomeViewController.swift */,
+				C592E053217B912000658104 /* RocketLaunchTableViewCell.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C592E037217B2F9100658104 /* ViewController.swift in Sources */,
+				C592E04C217B885900658104 /* Rocket.swift in Sources */,
 				C592E035217B2F9100658104 /* AppDelegate.swift in Sources */,
+				C592E051217B8AC800658104 /* RocketLaunch.swift in Sources */,
+				C592E04A217B7FFE00658104 /* UIColor.swift in Sources */,
+				C592E054217B912000658104 /* RocketLaunchTableViewCell.swift in Sources */,
+				C592E04F217B8A9400658104 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
