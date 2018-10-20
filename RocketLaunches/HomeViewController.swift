@@ -38,6 +38,9 @@ class HomeViewController: UIViewController {
         rocketLaunchesTableView.dataSource = self
         rocketLaunchesTableView.delegate = self
         
+        rocketLaunchesTableView.separatorStyle = .none
+        rocketLaunchesTableView.allowsSelection = false
+        
         rocketLaunchesTableView.backgroundColor = UIColor.kfGray
     }
 
@@ -65,5 +68,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

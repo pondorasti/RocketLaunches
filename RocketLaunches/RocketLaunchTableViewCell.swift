@@ -34,26 +34,40 @@ class RocketLaunchTableViewCell: UITableViewCell {
         
         destinationView.backgroundColor = UIColor.kfDestination
         rocketOperatorView.backgroundColor = UIColor.kfRocketOperator
+        
+        contentView.backgroundColor = UIColor.kfGray
+        
+        containerView.backgroundColor = UIColor.kfSuperWhite
+        containerView.layer.setUpShadow()
+        containerView.layer.cornerRadius = CALayer.kfCornerRadius
+        containerView.clipsToBounds = false
+        
+        missionNameLabel.textColor = UIColor.kfHeadline
+        spaceShipNameLabel.textColor = UIColor.kfBody
+        launchDateLabel.textColor = UIColor.kfBody
+        
+        wasSuccesfulLabel.textColor = UIColor.kfSuperWhite
+        rocketOperatorLabel.textColor = UIColor.kfSuperWhite
+        destinationLabel.textColor = UIColor.kfSuperWhite
+        
+        wasSuccesfulView.layer.cornerRadius = CALayer.kfCornerRadius
+        rocketOperatorView.layer.cornerRadius = CALayer.kfCornerRadius
+        destinationView.layer.cornerRadius = CALayer.kfCornerRadius
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
+        
+        
     }
     
     public func reloadData(for data: RocketLauch) {
-        contentView.backgroundColor = UIColor.kfGray
-        
-        containerView.backgroundColor = UIColor.kfSuperWhite
-        containerView.layer.setUpShadow()
-        containerView.layer.cornerRadius = CALayer.kfCornerRadius
-        containerView.clipsToBounds = true
-        
-        
         missionNameLabel.text = data.missionName
         spaceShipNameLabel.text = data.rocket.name
-        launchDateLabel.text = data.date.asString(style: .short)
+        launchDateLabel.text = "Date: \(data.date.asString(style: .short))"
         
         payloadImageView.image = data.payload.getImage()
         

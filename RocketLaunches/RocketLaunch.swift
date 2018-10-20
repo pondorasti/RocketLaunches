@@ -34,13 +34,13 @@ struct RocketLauch {
         func getColor() -> UIColor {
             switch self {
             case .TBD:
-                return UIColor.kfDestructive
+                return UIColor.kfOrange
                 
             case .go:
-                return UIColor.kfDestructive
+                return UIColor.kfSucces
                 
             case .succes:
-                return UIColor.kfDestructive
+                return UIColor.kfSucces
                 
             case .failure:
                 return UIColor.kfDestructive

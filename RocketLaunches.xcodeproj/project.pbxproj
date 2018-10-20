@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C592E035217B2F9100658104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E034217B2F9100658104 /* AppDelegate.swift */; };
 		C592E03A217B2F9100658104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E038217B2F9100658104 /* Main.storyboard */; };
-		C592E03C217B2F9200658104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C592E03B217B2F9200658104 /* Assets.xcassets */; };
 		C592E03F217B2F9200658104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E03D217B2F9200658104 /* LaunchScreen.storyboard */; };
 		C592E04A217B7FFE00658104 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E049217B7FFE00658104 /* UIColor.swift */; };
 		C592E04C217B885900658104 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E04B217B885900658104 /* Rocket.swift */; };
@@ -19,13 +18,13 @@
 		C592E056217B97A500658104 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E055217B97A500658104 /* Date.swift */; };
 		C592E058217B9AE300658104 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E057217B9AE300658104 /* CALayer.swift */; };
 		C592E05A217B9C3000658104 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E059217B9C3000658104 /* UIImage.swift */; };
+		C592E05C217BAF2C00658104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C592E05B217BAF2C00658104 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C592E031217B2F9100658104 /* RocketLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C592E034217B2F9100658104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C592E039217B2F9100658104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C592E03B217B2F9200658104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C592E03E217B2F9200658104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C592E040217B2F9200658104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C592E049217B7FFE00658104 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		C592E055217B97A500658104 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C592E057217B9AE300658104 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		C592E059217B9C3000658104 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C592E05B217BAF2C00658104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +73,8 @@
 				C592E048217B7FEE00658104 /* Extensions */,
 				C592E04D217B8A8300658104 /* Models */,
 				C592E038217B2F9100658104 /* Main.storyboard */,
+				C592E05B217BAF2C00658104 /* Assets.xcassets */,
 				C592E052217B8D3900658104 /* Home */,
-				C592E03B217B2F9200658104 /* Assets.xcassets */,
 			);
 			path = RocketLaunches;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C592E03F217B2F9200658104 /* LaunchScreen.storyboard in Resources */,
-				C592E03C217B2F9200658104 /* Assets.xcassets in Resources */,
+				C592E05C217BAF2C00658104 /* Assets.xcassets in Resources */,
 				C592E03A217B2F9100658104 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
