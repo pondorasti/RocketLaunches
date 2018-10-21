@@ -24,7 +24,7 @@ class DetailedRocketLaunchViewController: UIViewController {
     private func configureRocketLaunchTableView() {
         rocketLaunchTableView.allowsSelection = false
         
-        rocketLaunchTableView.rowHeight = UITableView.automaticDimension
+        rocketLaunchTableView.rowHeight = UITableViewAutomaticDimension
         rocketLaunchTableView.separatorStyle = .none
         
         rocketLaunchTableView.backgroundColor = .kfGray

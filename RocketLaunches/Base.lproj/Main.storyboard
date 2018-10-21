@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g1O-HU-4hU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g1O-HU-4hU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,6 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RocketLaunches" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -182,6 +181,7 @@
                         <segue destination="s27-SL-E3A" kind="show" identifier="showDetailedView" id="MIJ-3K-riW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2254" y="218"/>
         </scene>
@@ -191,10 +191,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="g1O-HU-4hU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aAQ-At-D3d">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="CVo-ns-4eT" kind="relationship" relationship="viewControllers" id="VML-dH-ObG"/>
                         <segue destination="Rj7-cK-Vr9" kind="relationship" relationship="viewControllers" id="HL6-Jq-5xY"/>
                     </connections>
                 </tabBarController>
@@ -224,7 +226,6 @@
         <!--Home-->
         <scene sceneID="sXC-GK-9Gn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wek-53-HkY" sceneMemberID="firstResponder"/>
                 <viewController id="s27-SL-E3A" customClass="DetailedRocketLaunchViewController" customModule="RocketLaunches" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JC-7K-Y2v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -597,8 +598,150 @@
                         <outlet property="rocketLaunchTableView" destination="Ux3-ay-3Ft" id="W48-po-53N"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wek-53-HkY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3124" y="217"/>
+        </scene>
+        <!--Upcoming-->
+        <scene sceneID="Ivk-VE-5Pp">
+            <objects>
+                <viewController id="f14-dZ-06w" customClass="UpcomingViewController" customModule="RocketLaunches" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BVO-Ed-VWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYy-6v-ypi">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcoming" rowHeight="440" id="tnV-Kg-MKi" customClass="UpcomingTableViewCell" customModule="RocketLaunches" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="440"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tnV-Kg-MKi" id="E7G-dn-foa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="439.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MoE-YC-80X">
+                                                    <rect key="frame" x="16" y="8" width="343" height="423.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ghw-ue-mRz">
+                                                            <rect key="frame" x="8" y="8" width="327" height="407.5"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-rj-VIM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KqI-eO-SEb">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="KqI-eO-SEb" secondAttribute="height" multiplier="1:1" id="9dZ-6o-YHl"/>
+                                                                                <constraint firstAttribute="height" constant="72" id="zUf-Ga-OrM"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zDW-xe-uqe" userLabel="Header Stack View">
+                                                                            <rect key="frame" x="88" y="0.0" width="239" height="42.5"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT7-sD-h2A">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="20.5"/>
+                                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spaceship Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YX-zE-2r2">
+                                                                                    <rect key="frame" x="0.0" y="24.5" width="116" height="18"/>
+                                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqB-ko-oSw">
+                                                                    <rect key="frame" x="0.0" y="175.5" width="327" height="184"/>
+                                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="xqB-ko-oSw" secondAttribute="height" multiplier="16:9" id="G8o-bC-Q3f"/>
+                                                                    </constraints>
+                                                                    <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                                        <wkPreferences key="preferences"/>
+                                                                    </wkWebViewConfiguration>
+                                                                </wkWebView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eU-Gj-476">
+                                                                    <rect key="frame" x="0.0" y="367.5" width="327" height="40"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="XzQ-6F-Jfn"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Ghw-ue-mRz" firstAttribute="top" secondItem="MoE-YC-80X" secondAttribute="top" constant="8" id="P0z-mo-hh7"/>
+                                                        <constraint firstItem="Ghw-ue-mRz" firstAttribute="leading" secondItem="MoE-YC-80X" secondAttribute="leading" constant="8" id="VMU-qE-WSf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ghw-ue-mRz" secondAttribute="bottom" constant="8" id="h6j-m7-KId"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ghw-ue-mRz" secondAttribute="trailing" constant="8" id="mi1-e8-l5h"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="MoE-YC-80X" secondAttribute="trailing" constant="16" id="Id7-iz-Rz2"/>
+                                                <constraint firstAttribute="bottom" secondItem="MoE-YC-80X" secondAttribute="bottom" constant="8" id="dwo-Pi-8b6"/>
+                                                <constraint firstItem="MoE-YC-80X" firstAttribute="top" secondItem="E7G-dn-foa" secondAttribute="top" constant="8" id="fxv-eo-8bd"/>
+                                                <constraint firstItem="MoE-YC-80X" firstAttribute="leading" secondItem="E7G-dn-foa" secondAttribute="leading" constant="16" id="hn0-8m-qBM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="containerView" destination="MoE-YC-80X" id="Xf3-GE-Ay2"/>
+                                            <outlet property="liveStreamWebView" destination="xqB-ko-oSw" id="JpX-fn-7Xf"/>
+                                            <outlet property="missionTitleLabel" destination="nT7-sD-h2A" id="gbx-0j-XbI"/>
+                                            <outlet property="payloadImageView" destination="KqI-eO-SEb" id="EBT-wY-qRD"/>
+                                            <outlet property="spaceshipLabel" destination="1YX-zE-2r2" id="oFv-xo-cmn"/>
+                                            <outlet property="timerView" destination="0eU-Gj-476" id="HFi-R8-IDr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gYy-6v-ypi" firstAttribute="top" secondItem="uG5-5u-xzQ" secondAttribute="top" id="CEO-dg-JiJ"/>
+                            <constraint firstItem="uG5-5u-xzQ" firstAttribute="trailing" secondItem="gYy-6v-ypi" secondAttribute="trailing" id="Hnh-sp-Y6t"/>
+                            <constraint firstItem="uG5-5u-xzQ" firstAttribute="bottom" secondItem="gYy-6v-ypi" secondAttribute="bottom" id="Juh-xk-zoZ"/>
+                            <constraint firstItem="gYy-6v-ypi" firstAttribute="leading" secondItem="uG5-5u-xzQ" secondAttribute="leading" id="LXQ-Bh-3FS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uG5-5u-xzQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upcoming" id="jQI-e5-Hcl"/>
+                    <connections>
+                        <outlet property="simpleTableView" destination="gYy-6v-ypi" id="MB1-Ld-bHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Mu-ry-p7t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="993"/>
+        </scene>
+        <!--Upcoming-->
+        <scene sceneID="pdL-Fr-zvq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CVo-ns-4eT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upcoming" id="Sqo-Yu-xt6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9xq-p3-fQ4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f14-dZ-06w" kind="relationship" relationship="rootViewController" id="ZeX-y0-nIn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9G-cg-G3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="993"/>
         </scene>
     </scenes>
     <resources>
