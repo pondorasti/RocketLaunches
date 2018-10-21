@@ -32,5 +32,13 @@ extension UIImage {
         
         return icon
     }()
+    
+    static let voyagerIcon: UIImage = {
+        guard let icon = UIImage(named: "VoyagerIcon") else {
+            fatalError("icon problemo")
+        }
+        
+        return icon
+    }()
 }
 

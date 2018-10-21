@@ -12,7 +12,7 @@ import UIKit
 struct RocketLaunch {
     
     enum PayloadType {
-        case astronaut, cargo, sattelite
+        case astronaut, cargo, sattelite, voyager
         
         func getImage() -> UIImage {
             switch self {
@@ -24,6 +24,9 @@ struct RocketLaunch {
                 
             case .sattelite:
                 return UIImage.satteliteIcon
+                
+            case .voyager:
+                return UIImage.voyagerIcon
             }
         }
     }
@@ -101,7 +104,7 @@ struct RocketLaunch {
         self.dateWindow = dateWindow
     }
     
-    init?(data: Any, index: Int) {
+    init?(data: Any, index: Int, payload: PayloadType, destination: String) {
         
         guard let dict = data as? [String: Any],
             let dictionaryArray = dict["launches"] as? [[String: Any]],
@@ -152,12 +155,12 @@ struct RocketLaunch {
         self.spacePort = spacePort
         //MARK: hard coded values
         
-        self.payload = .astronaut
-        destination = "LEO"
+        self.payload = payload
+        self.destination = destination
         
         dateWindow = "poof"
         
-        let rocket = Rocket(imageURL: imageURL, wikiURL: wikiURL, name: rocketName, family: familyName, configuration: configuration, generalDescription: "", height: 420, diameter: 420, numberOfStages: 4, massToLEO: 9, massToGTO: 9, massAtLaunch: 9)
+        let rocket = Rocket(imageURL: imageURL, wikiURL: wikiURL, name: rocketName, family: familyName, configuration: configuration, generalDescription: "", height: 17.6, diameter: 1.27, numberOfStages: 3, massToLEO: 977, massToGTO: 247, massAtLaunch: 18500)
         
         self.rocket = rocket
         

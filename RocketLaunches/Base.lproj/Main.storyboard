@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g1O-HU-4hU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g1O-HU-4hU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -628,7 +628,7 @@
                                                             <rect key="frame" x="8" y="8" width="327" height="407.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-rj-VIM">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="111.5"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KqI-eO-SEb">
                                                                             <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
@@ -657,10 +657,10 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqB-ko-oSw">
-                                                                    <rect key="frame" x="0.0" y="175.5" width="327" height="184"/>
+                                                                    <rect key="frame" x="0.0" y="119.5" width="327" height="240"/>
                                                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="xqB-ko-oSw" secondAttribute="height" multiplier="16:9" id="G8o-bC-Q3f"/>
+                                                                        <constraint firstAttribute="height" constant="240" id="9U3-0S-WF0"/>
                                                                     </constraints>
                                                                     <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
                                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -669,9 +669,20 @@
                                                                 </wkWebView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eU-Gj-476">
                                                                     <rect key="frame" x="0.0" y="367.5" width="327" height="40"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-QM-lqT">
+                                                                            <rect key="frame" x="295" y="8" width="24" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="FCu-QM-lqT" secondAttribute="height" multiplier="1:1" id="IvG-bV-RfT"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="FCu-QM-lqT" secondAttribute="trailing" constant="8" id="A89-zP-K9c"/>
                                                                         <constraint firstAttribute="height" constant="40" id="XzQ-6F-Jfn"/>
+                                                                        <constraint firstItem="FCu-QM-lqT" firstAttribute="top" secondItem="0eU-Gj-476" secondAttribute="top" constant="8" id="f2X-WE-H6I"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="FCu-QM-lqT" secondAttribute="bottom" constant="8" id="qDC-iu-l86"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -747,6 +758,7 @@
     </scenes>
     <resources>
         <image name="HomeIcon" width="26" height="26"/>
+        <image name="ShareIcon" width="26" height="26"/>
         <image name="Spaceship" width="1004" height="1600"/>
         <image name="UpcomingIcon" width="26" height="26"/>
     </resources>

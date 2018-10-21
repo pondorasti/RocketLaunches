@@ -24,11 +24,53 @@ class HomeViewController: UIViewController {
         RoccetService.retrieveNext(HomeViewController.numberOfLaunchesToShow) { [unowned self] (data) in
             print(data)
             
-            for index in 0..<HomeViewController.numberOfLaunchesToShow {
-                if let newRocketLaunch = RocketLaunch(data: data, index: index) {
-                    self.rocketLaunches.append(newRocketLaunch)
-                }
+//            for index in 0..<HomeViewController.numberOfLaunchesToShow {
+//                if let newRocketLaunch = RocketLaunch(data: data, index: index, payload: .sattelite, destination: "LEO") {
+//                    self.rocketLaunches.append(newRocketLaunch)
+//                }
+//            }
+//
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 0, payload: .astronaut, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
             }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 1, payload: .sattelite, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 2, payload: .cargo, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 3, payload: .astronaut, destination: "Moon") {//fails
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 4, payload: .voyager, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 5, payload: .voyager, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 6, payload: .astronaut, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 7, payload: .sattelite, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 8, payload: .cargo, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
+            if let newRocketLaunch = RocketLaunch(data: data, index: 9, payload: .voyager, destination: "LEO") {
+                self.rocketLaunches.append(newRocketLaunch)
+            }
+            
             
             self.rocketLaunchesTableView.reloadData()
         }

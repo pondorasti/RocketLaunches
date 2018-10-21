@@ -65,7 +65,7 @@ class RocketLaunchTableViewCell: UITableViewCell {
     public func reloadData(for data: RocketLaunch) {
         missionNameLabel.text = data.missionName
         spaceShipNameLabel.text = data.rocket.name
-        launchDateLabel.text = "Date: \(data.date)"
+        launchDateLabel.text = "\(data.date)"
         
         payloadImageView.image = data.payload.getImage()
         

@@ -39,7 +39,7 @@ class UpcomingTableViewCell: UITableViewCell {
     }
     
     private func configureTimer() {
-        let countDownLabel = CountdownLabel(frame: timerView.bounds, minutes: 30 * 60)
+        let countDownLabel = CountdownLabel(frame: timerView.bounds, minutes: 65)
         timerView.addSubview(countDownLabel)
         
         countDownLabel.textAlignment = .center
@@ -67,10 +67,11 @@ class UpcomingTableViewCell: UITableViewCell {
         missionTitleLabel.text = data.missionName
         spaceshipLabel.text = data.rocket.name
         
-        if let url = URL(string: "https://youtu.be/z6UtNpbGSHs") {
+        if let url = URL(string: "https://youtu.be/wbSwFU6tY1c?t=1259") {
             liveStreamWebView.load(URLRequest(url: url))
         }
     
     }
+
 
 }

@@ -85,12 +85,12 @@ class SpaceshipTableViewCell: UITableViewCell {
         
         spaceshipImageView.kf.setImage(with: data.imageURL)
         
-        heightLabel.text = "Height: \(data.height)"
-        diameterLabel.text = "Diameter: \(data.diameter)"
+        heightLabel.text = "Height: \(data.height) meters"
+        diameterLabel.text = "Diameter: \(data.diameter) meters"
         numberOfStagesLabel.text = "Number of Stages: \(data.numberOfStages)"
-        massToLEOLabel.text = "Mass to LEO: \(data.massToLEO)"
-        massToGTOLabel.text = "Mass to GTO: \(data.massToGTO)"
-        massAtLaunchLabel.text = "Mass at Launch: \(data.massAtLaunch)"
+        massToLEOLabel.text = "Mass to LEO: \(data.massToLEO) kg"
+        massToGTOLabel.text = "Mass to GTO: \(data.massToGTO) kg"
+        massAtLaunchLabel.text = "Mass at Launch: \(data.massAtLaunch) kg"
         
     }
 }

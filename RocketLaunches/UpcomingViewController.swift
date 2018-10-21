@@ -19,14 +19,19 @@ class UpcomingViewController: UIViewController {
         
         configureTableView()
         
-        RoccetService.retrieveNext { [unowned self] (data) in
+        RoccetService.retrieveLaunchFor { [unowned self] (data) in
             print(data)
-            let newRocketLaunch = RocketLaunch(data: data, index: 0)
+            let newRocketLaunch = RocketLaunch(data: data, index: 0, payload: .cargo, destination: "Helio-N/A")
             
             self.rocketLaunch = newRocketLaunch
             self.simpleTableView.reloadData()
         }
+
     }
+    
+    
+    
+    
     
     private func configureTableView() {
         simpleTableView.rowHeight = UITableViewAutomaticDimension

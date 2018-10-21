@@ -19,4 +19,12 @@ struct RoccetService {
             }
         }
     }
+    
+    static func retrieveLaunchFor(_ url: String = "https://launchlibrary.net/1.4/launch/Falcon_Heavy", completion: @escaping (_ data: Any) -> ()) {
+        Alamofire.request(url).responseJSON { (response) in
+            if let json = response.result.value {
+                return completion(json)
+            }
+        }
+    }
 }
