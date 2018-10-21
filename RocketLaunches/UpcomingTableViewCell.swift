@@ -39,7 +39,7 @@ class UpcomingTableViewCell: UITableViewCell {
     }
     
     private func configureTimer() {
-        let countDownLabel = CountdownLabel(frame: timerView.bounds, minutes: 65)
+        let countDownLabel = CountdownLabel(frame: timerView.bounds, minutes: 70)
         timerView.addSubview(countDownLabel)
         
         countDownLabel.textAlignment = .center

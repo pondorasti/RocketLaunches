@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class UpcomingViewController: UIViewController {
 
     @IBOutlet private weak var simpleTableView: UITableView!
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
     private var rocketLaunch: RocketLaunch?
     
     override func viewDidLoad() {
@@ -29,7 +31,24 @@ class UpcomingViewController: UIViewController {
 
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let loaderFrame = CGRect(x: self.view.bounds.midX - 50, y: self.view.bounds.midY - 50, width: 100, height: 100)
+        let loader = NVActivityIndicatorView(frame: loaderFrame, type: NVActivityIndicatorType(rawValue: 30), color: .kfPrimary, padding: nil)
+        
+        self.blurView.contentView.addSubview(loader)
+        loader.startAnimating()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(5000)) { [unowned self] in
+            UIView.animate(withDuration: 0.25, animations: {
+                self.blurView.alpha = 0
+            }, completion: { (_) in
+                loader.stopAnimating()
+                self.blurView.isHidden = true
+            })
+        }
+    }
     
     
     

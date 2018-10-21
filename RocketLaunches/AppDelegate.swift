@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfPrimary]
-//        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfPrimary]
-//        UINavigationBar.appearance().tintColor = .kfPrimary
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfSuperWhite]
+//        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfSuperWhite]
+        UINavigationBar.appearance().barTintColor = .red
+        
         UINavigationBar.appearance().barTintColor = .kfSuperWhite
         UINavigationBar.appearance().isTranslucent = true
         

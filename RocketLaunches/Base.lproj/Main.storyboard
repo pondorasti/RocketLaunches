@@ -198,6 +198,7 @@
                     <connections>
                         <segue destination="CVo-ns-4eT" kind="relationship" relationship="viewControllers" id="VML-dH-ObG"/>
                         <segue destination="Rj7-cK-Vr9" kind="relationship" relationship="viewControllers" id="HL6-Jq-5xY"/>
+                        <segue destination="Wz0-Wk-Z5v" kind="relationship" relationship="viewControllers" id="dNb-97-GNf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbQ-Ff-Crg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -600,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wek-53-HkY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3124" y="217"/>
+            <point key="canvasLocation" x="4270" y="506"/>
         </scene>
         <!--Upcoming-->
         <scene sceneID="Ivk-VE-5Pp">
@@ -716,6 +717,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGs-ue-k3o">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ycw-bY-oiv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -723,18 +732,49 @@
                             <constraint firstItem="uG5-5u-xzQ" firstAttribute="trailing" secondItem="gYy-6v-ypi" secondAttribute="trailing" id="Hnh-sp-Y6t"/>
                             <constraint firstItem="uG5-5u-xzQ" firstAttribute="bottom" secondItem="gYy-6v-ypi" secondAttribute="bottom" id="Juh-xk-zoZ"/>
                             <constraint firstItem="gYy-6v-ypi" firstAttribute="leading" secondItem="uG5-5u-xzQ" secondAttribute="leading" id="LXQ-Bh-3FS"/>
+                            <constraint firstItem="uG5-5u-xzQ" firstAttribute="trailing" secondItem="JGs-ue-k3o" secondAttribute="trailing" id="aRu-iu-aUR"/>
+                            <constraint firstItem="JGs-ue-k3o" firstAttribute="top" secondItem="BVO-Ed-VWc" secondAttribute="top" id="cEG-a0-gT4"/>
+                            <constraint firstItem="JGs-ue-k3o" firstAttribute="leading" secondItem="uG5-5u-xzQ" secondAttribute="leading" id="fIF-mL-T0E"/>
+                            <constraint firstAttribute="bottom" secondItem="JGs-ue-k3o" secondAttribute="bottom" id="sLS-YB-xr1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uG5-5u-xzQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Upcoming" id="jQI-e5-Hcl"/>
                     <connections>
+                        <outlet property="blurView" destination="JGs-ue-k3o" id="HBI-zj-efe"/>
                         <outlet property="simpleTableView" destination="gYy-6v-ypi" id="MB1-Ld-bHB"/>
                         <segue destination="s27-SL-E3A" kind="show" identifier="everythingIsFine" id="sh2-KA-B2l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Mu-ry-p7t" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="993"/>
+            <point key="canvasLocation" x="1324" y="949"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="ZXR-jg-3mQ">
+            <objects>
+                <viewController id="eb2-5D-Nbt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Hh-Xf-azG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-fM-gSn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="565"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3bC-fM-gSn" firstAttribute="leading" secondItem="Avu-xr-Bsn" secondAttribute="leading" id="U3J-8C-zoB"/>
+                            <constraint firstItem="3bC-fM-gSn" firstAttribute="trailing" secondItem="Avu-xr-Bsn" secondAttribute="trailing" id="jGs-n4-t9b"/>
+                            <constraint firstItem="3bC-fM-gSn" firstAttribute="top" secondItem="Avu-xr-Bsn" secondAttribute="top" id="t0t-bD-2EL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Avu-xr-Bsn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="3ng-yC-cck"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o30-6D-ctE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-695" y="1747"/>
         </scene>
         <!--Upcoming-->
         <scene sceneID="pdL-Fr-zvq">
@@ -753,11 +793,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9G-cg-G3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="993"/>
+            <point key="canvasLocation" x="385" y="949"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="5y2-OX-vHa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wz0-Wk-Z5v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Leaderboard" image="LeaderboardIcon" id="r48-jV-5TE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pg5-aN-keh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eb2-5D-Nbt" kind="relationship" relationship="rootViewController" id="LlV-P7-ZMg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSd-mc-gWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-695" y="949"/>
         </scene>
     </scenes>
     <resources>
         <image name="HomeIcon" width="26" height="26"/>
+        <image name="Leaderboard" width="376" height="565"/>
+        <image name="LeaderboardIcon" width="25" height="25"/>
         <image name="ShareIcon" width="26" height="26"/>
         <image name="Spaceship" width="1004" height="1600"/>
         <image name="UpcomingIcon" width="26" height="26"/>
