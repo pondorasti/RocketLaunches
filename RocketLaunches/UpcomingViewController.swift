@@ -19,6 +19,8 @@ class UpcomingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = .kfPrimary
+        
         configureTableView()
         
         RoccetService.retrieveLaunchFor { [unowned self] (data) in

@@ -16,7 +16,8 @@ class DetailedRocketLaunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        title = "Details"
         
         configureRocketLaunchTableView()
     }

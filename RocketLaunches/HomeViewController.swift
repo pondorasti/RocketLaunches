@@ -21,6 +21,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        navigationController?.navigationBar.barTintColor = .kfPrimary
+        
+        
         configureTableView()
         
         RoccetService.retrieveNext(HomeViewController.numberOfLaunchesToShow) { [unowned self] (data) in

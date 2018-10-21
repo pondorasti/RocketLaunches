@@ -753,7 +753,7 @@
         <!--Leaderboard-->
         <scene sceneID="ZXR-jg-3mQ">
             <objects>
-                <viewController id="eb2-5D-Nbt" sceneMemberID="viewController">
+                <viewController id="eb2-5D-Nbt" customClass="LeaderboardViewController" customModule="RocketLaunches" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Hh-Xf-azG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

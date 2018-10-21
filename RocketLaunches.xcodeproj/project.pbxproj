@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C500DC83217C32F300F0FA0C /* RoccetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C500DC82217C32F300F0FA0C /* RoccetService.swift */; };
 		C500DC85217C41B800F0FA0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C500DC84217C41B800F0FA0C /* Constants.swift */; };
+		C502AA96217C73B20042FEFD /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502AA95217C73B20042FEFD /* LeaderboardViewController.swift */; };
 		C592E035217B2F9100658104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E034217B2F9100658104 /* AppDelegate.swift */; };
 		C592E03A217B2F9100658104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E038217B2F9100658104 /* Main.storyboard */; };
 		C592E03F217B2F9200658104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E03D217B2F9200658104 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 		B9D024A009E78022636C40D1 /* Pods-RocketLaunches.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLaunches.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketLaunches/Pods-RocketLaunches.debug.xcconfig"; sourceTree = "<group>"; };
 		C500DC82217C32F300F0FA0C /* RoccetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoccetService.swift; sourceTree = "<group>"; };
 		C500DC84217C41B800F0FA0C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C502AA95217C73B20042FEFD /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		C592E031217B2F9100658104 /* RocketLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C592E034217B2F9100658104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C592E039217B2F9100658104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				C599E569217C0046009ACD4F /* Upcoming */,
 				C592E052217B8D3900658104 /* Home */,
 				C592E05F217BC2DD00658104 /* Detailed Rocket Launch */,
+				C502AA95217C73B20042FEFD /* LeaderboardViewController.swift */,
 			);
 			path = RocketLaunches;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				C500DC85217C41B800F0FA0C /* Constants.swift in Sources */,
 				C592E065217BDF1100658104 /* SpaceshipTableViewCell.swift in Sources */,
 				C592E04C217B885900658104 /* Rocket.swift in Sources */,
+				C502AA96217C73B20042FEFD /* LeaderboardViewController.swift in Sources */,
 				C592E058217B9AE300658104 /* CALayer.swift in Sources */,
 				C592E035217B2F9100658104 /* AppDelegate.swift in Sources */,
 				C592E056217B97A500658104 /* Date.swift in Sources */,

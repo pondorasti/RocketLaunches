@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfSuperWhite]
-//        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfSuperWhite]
-        UINavigationBar.appearance().barTintColor = .red
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfSuperWhite]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.kfSuperWhite]
         
-        UINavigationBar.appearance().barTintColor = .kfSuperWhite
+        
+        UINavigationBar.appearance().tintColor = .kfSuperWhite
         UINavigationBar.appearance().isTranslucent = true
         
         UITabBar.appearance().tintColor = .kfPrimary
