@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SpaceshipTableViewCell: UITableViewCell {
     
@@ -82,8 +83,7 @@ class SpaceshipTableViewCell: UITableViewCell {
         
         descriptionLabel.text = data.generalDescription
         
-        //TODO: fix me
-//        spaceshipImageView.image = data.image
+        spaceshipImageView.kf.setImage(with: data.imageURL)
         
         heightLabel.text = "Height: \(data.height)"
         diameterLabel.text = "Diameter: \(data.diameter)"

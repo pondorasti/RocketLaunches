@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C500DC83217C32F300F0FA0C /* RoccetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C500DC82217C32F300F0FA0C /* RoccetService.swift */; };
+		C500DC85217C41B800F0FA0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C500DC84217C41B800F0FA0C /* Constants.swift */; };
 		C592E035217B2F9100658104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592E034217B2F9100658104 /* AppDelegate.swift */; };
 		C592E03A217B2F9100658104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E038217B2F9100658104 /* Main.storyboard */; };
 		C592E03F217B2F9200658104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592E03D217B2F9200658104 /* LaunchScreen.storyboard */; };
@@ -32,6 +34,8 @@
 		5CD072D4C87288123976A4C3 /* Pods_RocketLaunches.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketLaunches.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6015D1A536278DEA6D284259 /* Pods-RocketLaunches.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLaunches.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketLaunches/Pods-RocketLaunches.release.xcconfig"; sourceTree = "<group>"; };
 		B9D024A009E78022636C40D1 /* Pods-RocketLaunches.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLaunches.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketLaunches/Pods-RocketLaunches.debug.xcconfig"; sourceTree = "<group>"; };
+		C500DC82217C32F300F0FA0C /* RoccetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoccetService.swift; sourceTree = "<group>"; };
+		C500DC84217C41B800F0FA0C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C592E031217B2F9100658104 /* RocketLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C592E034217B2F9100658104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C592E039217B2F9100658104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C500DC81217C32BA00F0FA0C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C500DC82217C32F300F0FA0C /* RoccetService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		C592E028217B2F9100658104 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 			children = (
 				C592E047217B7FD300658104 /* Supporting Files */,
 				C592E046217B7FCB00658104 /* Helper */,
+				C500DC81217C32BA00F0FA0C /* Service */,
 				C592E048217B7FEE00658104 /* Extensions */,
 				C592E04D217B8A8300658104 /* Models */,
 				C592E038217B2F9100658104 /* Main.storyboard */,
@@ -120,6 +133,7 @@
 		C592E046217B7FCB00658104 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C500DC84217C41B800F0FA0C /* Constants.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -277,11 +291,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RocketLaunches/Pods-RocketLaunches-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CountdownLabel/CountdownLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountdownLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -296,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C592E05E217BC2D800658104 /* MissionTableViewCell.swift in Sources */,
+				C500DC85217C41B800F0FA0C /* Constants.swift in Sources */,
 				C592E065217BDF1100658104 /* SpaceshipTableViewCell.swift in Sources */,
 				C592E04C217B885900658104 /* Rocket.swift in Sources */,
 				C592E058217B9AE300658104 /* CALayer.swift in Sources */,
@@ -310,6 +329,7 @@
 				C592E054217B912000658104 /* RocketLaunchTableViewCell.swift in Sources */,
 				C599E568217C003A009ACD4F /* UpcomingViewController.swift in Sources */,
 				C592E04F217B8A9400658104 /* HomeViewController.swift in Sources */,
+				C500DC83217C32F300F0FA0C /* RoccetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

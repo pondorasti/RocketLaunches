@@ -30,6 +30,9 @@ class UpcomingTableViewCell: UITableViewCell {
         
         contentView.backgroundColor = .kfGray
         
+        liveStreamWebView.layer.cornerRadius = CALayer.kfCornerRadius
+        liveStreamWebView.clipsToBounds = true
+        
         configureContainerView()
         configureLabels()
         configureTimer()
@@ -37,7 +40,11 @@ class UpcomingTableViewCell: UITableViewCell {
     
     private func configureTimer() {
         let countDownLabel = CountdownLabel(frame: timerView.bounds, minutes: 30 * 60)
-        timerView.addSubview(countDownLabel )
+        timerView.addSubview(countDownLabel)
+        
+        countDownLabel.textAlignment = .center
+        countDownLabel.font = UIFont.preferredFont(forTextStyle: .title1)
+        countDownLabel.animationType = .Evaporate
         
         countDownLabel.start()
     }

@@ -11,8 +11,8 @@ import UIKit
 
 struct Rocket {
 
-    let image: UIImage
-    let wikiLink: URL
+    let imageURL: URL
+    let wikiURL: URL
     
     let name: String
     let family: String

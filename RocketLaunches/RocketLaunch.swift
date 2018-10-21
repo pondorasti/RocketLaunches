@@ -29,7 +29,7 @@ struct RocketLaunch {
     }
     
     enum Status: String {
-        case TBD, go, succes, failure
+        case go, TBD, succes, failure
         
         func getColor() -> UIColor {
             switch self {
@@ -46,6 +46,25 @@ struct RocketLaunch {
                 return UIColor.kfDestructive
             }
         }
+        
+        static func getFor(_ value: Int) -> Status {
+            switch value {
+            case 1:
+                return .go
+                
+            case 2:
+                return .TBD
+                
+            case 3:
+                return .succes
+                
+            case 4:
+                return .failure
+                
+            default:
+                fatalError()
+            }
+        }
     }
     
     let rocket: Rocket
@@ -55,7 +74,7 @@ struct RocketLaunch {
     
     let payload: PayloadType
     
-    let date: Date
+    let date: String
     let status: Status
     let rocketOperator: String
     
@@ -63,4 +82,84 @@ struct RocketLaunch {
     let destination: String
     
     let dateWindow: String
+    
+    init(rocket: Rocket, missionName: String, missionDescription: String, payload: PayloadType, date: String, status: Status, rocketOperator: String, spacePort: String, destination: String, dateWindow: String) {
+        self.rocket = rocket
+        
+        self.missionDescription = missionDescription
+        self.missionName = missionName
+        
+        self.payload = payload
+        
+        self.date = date
+        self.status = status
+        self.rocketOperator = rocketOperator
+        
+        self.spacePort = spacePort
+        self.destination = destination
+        
+        self.dateWindow = dateWindow
+    }
+    
+    init?(data: Any, index: Int) {
+        
+        guard let dict = data as? [String: Any],
+            let dictionaryArray = dict["launches"] as? [[String: Any]],
+            let dictionary = dictionaryArray[index] as? [String: Any],
+            
+            let windowstart = dictionary["windowstart"] as? String,
+            let windowend = dictionary["windowend"] as? String,
+            
+            let missionsDictArray = dictionary["missions"] as? [[String: Any]],
+            let missionsDict = missionsDictArray.first,
+            
+            let missionName = missionsDict["name"] as? String,
+            let missionDescription = missionsDict["description"] as? String,
+            let date = dictionary["net"] as? String,
+            let statusRawValue = dictionary["status"] as? Int,
+            
+            let agenciesDictArray = missionsDict["agencies"] as? [[String: Any]],
+            let agenciesDict = agenciesDictArray.first,
+            let rocketOperator = agenciesDict["abbrev"] as? String,
+            
+            let locationDict = dictionary["location"] as? [String: Any],
+            let padsDictArray = locationDict["pads"] as? [[String: Any]],
+            let padsDict = padsDictArray.first,
+            let spacePort = padsDict["name"] as? String,
+        
+            let rocketDict = dictionary["rocket"] as? [String: Any],
+            let rocketName = rocketDict["name"] as? String,
+            let familyName = rocketDict["familyname"] as? String,
+            let configuration = rocketDict["configuration"] as? String,
+            
+            let wikiLink = rocketDict["wikiURL"] as? String,
+            let wikiURL = URL(string: wikiLink),
+        
+            let imageLink = rocketDict["imageURL"] as? String,
+            let imageURL = URL(string: imageLink)
+        else {
+            return nil
+        }
+        
+        self.missionName = missionName
+        self.missionDescription = missionDescription
+        
+        self.date = date
+        self.status = Status.getFor(statusRawValue)
+        
+        self.rocketOperator = rocketOperator
+        
+        self.spacePort = spacePort
+        //MARK: hard coded values
+        
+        self.payload = .astronaut
+        destination = "LEO"
+        
+        dateWindow = "poof"
+        
+        let rocket = Rocket(imageURL: imageURL, wikiURL: wikiURL, name: rocketName, family: familyName, configuration: configuration, generalDescription: "", height: 420, diameter: 420, numberOfStages: 4, massToLEO: 9, massToGTO: 9, massAtLaunch: 9)
+        
+        self.rocket = rocket
+        
+    }
 }

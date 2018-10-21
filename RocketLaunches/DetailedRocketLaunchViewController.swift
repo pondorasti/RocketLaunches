@@ -79,15 +79,11 @@ extension DetailedRocketLaunchViewController: UITableViewDataSource {
         default:
             fatalError()
         }
-        
-        
     }
-    
-    
 }
 
 extension DetailedRocketLaunchViewController: WikiDelegate {
     func shouldPressButton() {
-        UIApplication.shared.open(rocketLaunch.rocket.wikiLink, options: [:])
+        UIApplication.shared.open(rocketLaunch.rocket.wikiURL, options: [:])
     }
 }
