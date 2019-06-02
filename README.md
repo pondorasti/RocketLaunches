@@ -33,9 +33,13 @@ The app has a built in leaderboard to keep users engaged and stimulate interest 
 
 ### Screenshots
 
-![SS1](Screenshots/IMG_1815.png)
-![SS2](Screenshots/IMG_1816.png)
-![SS3](Screenshots/IMG_1817.png)
-![SS4](Screenshots/IMG_1818.png)
-![SS5](Screenshots/IMG_1819.png)
-![SS6](Screenshots/IMG_1821.png)
+<p align="center">
+    <img src="https://github.com/Pondorasti/RocketLaunches/blob/master/Screenshots/IMG_1815.png" width="400">
+    <img src="https://github.com/Pondorasti/RocketLaunches/blob/master/Screenshots/IMG_1816.png" width="400">
+    <img src="https://github.com/Pondorasti/RocketLaunches/blob/master/Screenshots/IMG_1817.png" width="400">
+    <img src="https://github.com/Pondorasti/RocketLaunches/blob/master/Screenshots/IMG_1818.png" width="400">
+    <img src="https://github.com/Pondorasti/RocketLaunches/blob/master/Screenshots/IMG_1819.png" width="400">
+    <img src="https://github.com/Pondorasti/RocketLaunches/blob/master/Screenshots/IMG_1821.png" width="400">
+</p>
+
+
