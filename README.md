@@ -7,11 +7,11 @@ Do you know when the next rocket launch is? Create a tool to track international
 
 ## Team
 
-- [Alexandru Turcanu](https://github.com/Pondorasti)
-- [Radu Pogonariu](https://github.com/walle256)
-- [Sanziana Tudose](https://github.com/SanzianaTudose)
-- Victor Suciu
-- Andrei Preda
+- [Alexandru Turcanu](https://github.com/Pondorasti) - iOS App Engineer
+- [Radu Pogonariu](https://github.com/walle256) - Google Home Integration & Plugin
+- [Sanziana Tudose](https://github.com/SanzianaTudose) - Marketing Team
+- Victor Suciu - Quality Assurance & UX Master
+- Andrei Preda - Pitcher & Marketing
 
 ## About 
 
